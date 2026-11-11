@@ -7,11 +7,14 @@ const esc = (s) =>
 const inline = (s) =>
   esc(s)
     .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
-    .replace(/`([^`]+)`/g, "<code>$1</code>");
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(/https:\/\/[a-z0-9.-]+/g, (url) => `<a href="${url}">${url}</a>`);
 function render(text) {
   let html = "",
     table = false;
-  for (const line of text.replace(/([^\n])\n(?![\n|#]|\d+\.)/g, "$1 ").split("\n")) {
+  for (const line of text
+    .replace(/([^\n])\n(?![\n|#]|\d+\.)/g, "$1 ")
+    .split("\n")) {
     if (line.startsWith("|")) {
       if (/^\|[-| ]+\|$/.test(line)) continue;
       if (!table) {

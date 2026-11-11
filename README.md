@@ -2,6 +2,10 @@
 
 An independent AI Product Engineer hiring assignment prototype for NIAT. A skill-ready student can book a Track Badge interview, the assigned interviewer can complete it and record an outcome, and the team can manage the queue and award integrity. No accounts or external credentials are needed.
 
+**Live prototype:** https://grit-interview-hub-niat.chattytick8.chatgpt.site
+
+**Submission write-up:** [two-page PDF](docs/assignment-writeup.pdf) · [Markdown](docs/assignment-writeup.md)
+
 ## Run locally
 
 Node 22+ and npm:
@@ -58,6 +62,8 @@ npm run test:e2e
 npm run build
 node scripts/render-writeup.mjs
 ```
+
+To run the same browser suite against the deployed prototype, set `TEST_BASE_URL` to the live origin (the test server is skipped).
 
 If reusing a preinstalled Chromium, set `PLAYWRIGHT_CHROMIUM_EXECUTABLE` to its absolute path. Otherwise Playwright uses its installed browser. Browser tests create desktop, mobile and operations screenshots in `docs/`. The PDF generator asserts exactly two pages, emits HTML/layout preview, and copies the PDF to `public/` for reviewer access. Final observed test results are in `docs/verification.md`.
 

@@ -26,4 +26,10 @@ PDF generation used the same environment. A normal developer workstation can ins
 
 ## Deployment
 
-Publication in progress. Hosting identity: `.openai/hosting.json`. A URL will be recorded here only after a successful deployment response.
+Public deployment succeeded on 11 November 2026. Verified by the Sites deployment response and public access configuration.
+
+Live prototype: https://grit-interview-hub-niat.chattytick8.chatgpt.site
+
+The same three Chromium browser tests also passed against the public URL in a fresh unauthenticated browser context (12.3 seconds total). This verifies cross-role booking, results, invalidation, refresh persistence and mobile scenarios on the actual deployment.
+
+First deployed source: `03dc667230544e803ef6c1e02f44e00504fbc66f`. The final documentation update adds this verified URL to the PDF/README. Hosting identity: `.openai/hosting.json`.
